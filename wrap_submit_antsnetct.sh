@@ -12,7 +12,9 @@ if [[ $# -lt 1 ]]; then
    echo "---" 
    echo "   each sub,ses gets submitted" 
    echo "   assumes T1-weighted images in $bids_in have been brain masked with neck trim using " 
-   echo "       T1wPreprocessing done for brain masking with neck trimming completed in ${hdbet_in}"
+   echo "       T1wPreprocessing done for brain masking with neck trimming completed in ${t1pre_in}"
+   echo "  " 
+   echo "   output goes to ${out_dir}"
    echo "---"
    echo "   if queue specified, jobs are submitted to it. Default: ftdc_normal"
    echo "---"
@@ -35,7 +37,7 @@ for i in `cat $subseslist`; do
     ses=$(echo $i | cut -d ',' -f2)
 
     ${submit_script} -b "bsub -q $queue -cwd . " \
-        -B $hdbet_in:/data/masks \
+        -B $t1pre_in:/data/masks \
         -i $bids_in \
         -m 16000 \
         -n 4 \
