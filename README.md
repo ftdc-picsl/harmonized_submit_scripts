@@ -7,8 +7,8 @@ For this version, we use
 
 Make a config in configs/ for your dataset. The config requires a 
 bids_in="/path/to/bids"
-t1pre_in="/path/to/output/of/T1wPreprocessing_051"
-out_dir="path/to/output/of/antsnetct_054"
+t1pre_dir="/path/to/output/of/T1wPreprocessing_051"
+antsnetct_dir="path/to/output/of/antsnetct_054"
 
 Once you make a config, don't delete it unless you delete your whole output directory for provenance or something probably.
 
