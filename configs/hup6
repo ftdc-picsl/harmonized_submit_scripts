@@ -1,4 +1,3 @@
 bids_in="/project/ftdc_volumetric/fw_bids"
-t1pre_in="/project/ftdc_pipeline/data/T1wPreprocessing_051"
-out_dir="/project/ftdc_pipeline/data/antsnetct_054"
-
+t1pre_dir="/project/ftdc_pipeline/data/T1wPreprocessing_051"
+antsnetct_dir="/project/ftdc_pipeline/data/antsnetct_054"
