@@ -26,3 +26,4 @@ source ${config}
 
 cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} ${sublist} ${listtype}" 
 echo $cmd
+$cmd
