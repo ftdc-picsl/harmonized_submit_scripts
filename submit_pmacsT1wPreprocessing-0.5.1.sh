@@ -24,6 +24,6 @@ fi
 
 source ${config}
 
-cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} ${sublist} ${listtype}" 
+cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} ${sublist} ${listtype} --trim-neck" 
 echo $cmd
 $cmd
