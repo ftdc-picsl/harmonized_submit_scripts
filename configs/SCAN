@@ -1,0 +1,3 @@
+bids_in="/project/wolk_4/SCAN/bids"
+t1pre_out="/project/wolk_4/SCAN/bids/derivatives/T1wPreprocessing_051"
+antsnetct_dir="/project/wolk_4/SCAN/bids/derivatives/antsnetct_054"
