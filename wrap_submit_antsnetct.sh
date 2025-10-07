@@ -37,7 +37,7 @@ for i in `cat $subseslist`; do
     ses=$(echo $i | cut -d ',' -f2)
 
     ${submit_script} -b "bsub -q $queue -cwd . " \
-        -B $t1pre_dir:/data/masks \
+        -B $t1pre_dir:$t1pre_dir \
         -i $bids_in \
         -m 16000 \
         -n 4 \
@@ -46,10 +46,10 @@ for i in `cat $subseslist`; do
         -- \
         --participant $sub \
         --session $ses \
-        --brain-mask-dataset /data/masks \
+        --brain-mask-dataset $t1pre_dir \
         --do-ants-atropos-n4 \
         --template-name ADNINormalAgingANTs \
-        --no-neck-trim --skip-bids-validation  # we neck trimmed during T1preproc and we are using derived inputs
+        --pad-mm 0 --no-neck-trim --skip-bids-validation  # we neck trimmed and padded during T1preproc and we are using derived inputs
 
     sleep .1
 
