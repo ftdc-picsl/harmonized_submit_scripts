@@ -1,0 +1,19 @@
+{
+  "schaefer2018x100x7": {
+    "template_label": "MNI152NLin2009cAsym",
+    "template_resolution": "01",
+    "atlas_label": "Schaefer2018",
+    "atlas_description": "100Parcels7Networks",
+    "sample_thickness": true,
+    "restrict_to_cortex": true,
+    "propagate_to_cortex": false
+  },
+  "brainCOLORSubcortical": {
+    "template_label": "ADNINormalAgingANTs",
+    "template_resolution": "01",
+    "atlas_label": "BrainColor",
+    "atlas_description": "subcortical",
+    "sample_thickness": false,
+    "mask_csf": true
+    }
+}
