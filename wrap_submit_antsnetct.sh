@@ -41,7 +41,6 @@ echo ""
 echo " output goes to ${antsnetct_dir} " 
 echo ""
 
-exit 1
 for i in `cat $subseslist`; do 
     sub=$(echo $i | cut -d ',' -f1)
     ses=$(echo $i | cut -d ',' -f2)
