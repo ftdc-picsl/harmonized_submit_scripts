@@ -10,16 +10,15 @@ if [[ $# -lt 2 ]]; then
    echo "   assumes T1-weighted images in bids_in have been brain masked with neck trim using " 
    echo "       T1wPreprocessing done for brain masking with neck trimming completed in t1pre_dir"
    echo "  " 
-   echo "   config specifies bids_in, t1pre_dir, and antsnetct_dir"
+   echo "   config specifies bids_in, t1pre_dir, antsnetct_version, and antsnetct_dir"
    echo "---"
    echo "   if queue specified, jobs are submitted to it. Default: ftdc_normal"
    echo "---"
    echo "Notes: "
    echo " -uses ADNINormalAgingANTs as template (TEMPLATEFLOW_HOME set inside submit_antsnetct.sh)"
-   echo " -uses antsnetct version 0.5.4 "
    echo " -uses do-ants-atropos-n4 option "
    echo " "
-   exit 1
+  #  exit 1
 fi
 
 subseslist=$1
@@ -32,6 +31,16 @@ fi
 
 source $config
 
+echo ""
+echo " -original BIDS data from ${bids_in} "
+echo ""
+echo " -using brain masks from ${t1pre_dir} "
+echo ""
+echo " -using antsnetct version ${antsnetct_version} "
+echo ""
+echo " output goes to ${antsnetct_dir} " 
+echo ""
+
 for i in `cat $subseslist`; do 
     sub=$(echo $i | cut -d ',' -f1)
     ses=$(echo $i | cut -d ',' -f2)
@@ -42,7 +51,7 @@ for i in `cat $subseslist`; do
         -m 16000 \
         -n 4 \
         -o $antsnetct_dir \
-        -v 0.5.4 \
+        -v $antsnetct_version \
         -- \
         --participant $sub \
         --session $ses \
