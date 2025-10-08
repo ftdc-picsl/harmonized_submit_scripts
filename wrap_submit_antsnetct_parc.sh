@@ -3,7 +3,7 @@
 submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.3.0/bin/submit_antsnetct_parcellate.sh"
 
 if [[ $# -lt 3 ]]; then
-   echo "USAGE: wrap_submit_antsnetct_parcellate.sh <sub,ses.csv> <config> <atlas_label_config> <optional:queue>"
+   echo "USAGE: wrap_submit_antsnetct_parc.sh <sub,ses.csv> <config> <atlas_label_config> <optional:queue>"
    echo "   wraps $submit_script for FTDC-ADRC harmonized ANTsNetCT parcellation pipeline"
    echo "---" 
    echo "   all images in antsnetct sub,ses directories get submitted for parcellation" 
