@@ -1,4 +1,4 @@
 bids_in="/project/wolk_4/SCAN/bids"
-t1pre_dir="/project/wolk_4/SCAN/bids/derivatives/T1wPreprocessing_051"
+t1pre_dir="/project/wolk_4/SCAN/bids/derivatives/T1wPreprocessing_060"
 antsnetct_version="0.5.4"
 antsnetct_dir="/project/wolk_4/SCAN/bids/derivatives/antsnetct_${antsnetct_version//.}"
