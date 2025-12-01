@@ -1,6 +1,6 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.2.2/bin/submit_antsnetct.sh"
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.0/bin/submit_antsnetct.sh"
 
 if [[ $# -lt 2 ]]; then
    echo "USAGE: wrap_submit_antsnetct.sh <sub,ses.csv> <config> <optional:queue>"
