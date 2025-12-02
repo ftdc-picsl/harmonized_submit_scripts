@@ -4,8 +4,8 @@ This directory contains the 'harmonized' scripts for the ADRC and FTDC to submit
 ## Current usage
 We use the containers in /project/ftdc_pipeline/ftdc-picsl  
 For this version, we use   
-    -pmacsT1wPreprocessing-0.6.2 for brain masking with the neck trim
-    -pmacsAntsnetct-0.4.4 with antsnetct container version 0.6.0 for the segmentation and cortical thickness estimate
+    -pmacsT1wPreprocessing-0.6.2 for brain masking with the neck trim (https://github.com/ftdc-picsl/pmacsT1wPreprocessing )  
+    -pmacsAntsnetct-0.4.4 with antsnetct container version 0.6.0 for the segmentation and cortical thickness estimate (https://github.com/ftdc-picsl/pmacsAntsnetct )  
 
 ## Configs
 Make a config in configs/ for your dataset. The config requires a  
