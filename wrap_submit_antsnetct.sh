@@ -1,6 +1,6 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.0/bin/submit_antsnetct.sh"
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.0/bin/submit_antsnetct_batch.sh"
 
 if [[ $# -lt 2 ]]; then
    echo "USAGE: wrap_submit_antsnetct.sh <sub,ses.csv> <config> <optional:queue>"
@@ -18,7 +18,7 @@ if [[ $# -lt 2 ]]; then
    echo " -uses ADNINormalAgingANTs as template (TEMPLATEFLOW_HOME set inside submit_antsnetct.sh)"
    echo " -uses do-ants-atropos-n4 option "
    echo " "
-  #  exit 1
+   exit 1
 fi
 
 subseslist=$1
@@ -41,25 +41,17 @@ echo ""
 echo " output goes to ${antsnetct_dir} " 
 echo ""
 
-for i in `cat $subseslist`; do 
-    sub=$(echo $i | cut -d ',' -f1)
-    ses=$(echo $i | cut -d ',' -f2)
 
     ${submit_script} -b "bsub -q $queue -cwd . " \
         -B $t1pre_dir:$t1pre_dir \
         -i $bids_in \
-        -m 16000 \
-        -n 4 \
         -o $antsnetct_dir \
         -v $antsnetct_version \
+        antsnetct \
+        $subseslist \
         -- \
-        --participant $sub \
-        --session $ses \
         --brain-mask-dataset $t1pre_dir \
         --do-ants-atropos-n4 \
         --template-name ADNINormalAgingANTs \
         --pad-mm 0 --no-neck-trim --skip-bids-validation  # we neck trimmed and padded during T1preproc and we are using derived inputs
 
-    sleep .1
-
-done

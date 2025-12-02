@@ -1,0 +1,105 @@
+Sender: LSF System <jszostek@ftdc-gpu01>
+Subject: Job 43159212: <t1w_preproc_mk_scratch> in cluster <PMACS-SCC> Done
+
+Job <t1w_preproc_mk_scratch> was submitted from host <ftdcsub2> by user <olm> in cluster <PMACS-SCC> at Mon Dec  1 16:12:41 2025
+Job was executed on host(s) <ftdc-gpu01>, in queue <ftdc_normal>, as user <olm> in cluster <PMACS-SCC> at Mon Dec  1 16:12:41 2025
+</home/olm> was used as the home directory.
+</project/ftdc_pipeline/harmonized_submit_scripts/.> was used as the working directory.
+Started at Mon Dec  1 16:12:41 2025
+Terminated at Mon Dec  1 16:12:43 2025
+Results reported at Mon Dec  1 16:12:43 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.0/bin/get_tmpdir.sh /project/ftdc_pipeline/data/T1wPreprocessing_062/code/logs/t1w_preproc_local_tmpdir_9cC1WQ86.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.05 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   15 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <jszostek@ftdc-gpu01>
+Subject: Job 43159219: <t1w_preproc_mk_scratch> in cluster <PMACS-SCC> Done
+
+Job <t1w_preproc_mk_scratch> was submitted from host <ftdcsub2> by user <olm> in cluster <PMACS-SCC> at Mon Dec  1 16:22:37 2025
+Job was executed on host(s) <ftdc-gpu01>, in queue <ftdc_normal>, as user <olm> in cluster <PMACS-SCC> at Mon Dec  1 16:22:38 2025
+</home/olm> was used as the home directory.
+</project/ftdc_pipeline/harmonized_submit_scripts/.> was used as the working directory.
+Started at Mon Dec  1 16:22:38 2025
+Terminated at Mon Dec  1 16:22:39 2025
+Results reported at Mon Dec  1 16:22:39 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.0/bin/get_tmpdir.sh /project/ftdc_pipeline/data/T1wPreprocessing_062/code/logs/t1w_preproc_local_tmpdir_wGZwaghS.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.04 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <jszostek@ftdc-gpu01>
+Subject: Job 43163872: <t1w_preproc_mk_scratch> in cluster <PMACS-SCC> Done
+
+Job <t1w_preproc_mk_scratch> was submitted from host <ftdcsub2> by user <olm> in cluster <PMACS-SCC> at Tue Dec  2 11:43:24 2025
+Job was executed on host(s) <ftdc-gpu01>, in queue <ftdc_normal>, as user <olm> in cluster <PMACS-SCC> at Tue Dec  2 11:43:25 2025
+</home/olm> was used as the home directory.
+</project/ftdc_pipeline/harmonized_submit_scripts/.> was used as the working directory.
+Started at Tue Dec  2 11:43:25 2025
+Terminated at Tue Dec  2 11:43:27 2025
+Results reported at Tue Dec  2 11:43:27 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.0/bin/get_tmpdir.sh /project/ftdc_pipeline/data/T1wPreprocessing_062/code/logs/t1w_preproc_local_tmpdir_tdqJDqK3.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.04 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) follows:
+
