@@ -6,6 +6,7 @@ __pycache__/
 # data
 *.txt
 *.csv
+wtf.out
 
 # C extensions
 *.so
