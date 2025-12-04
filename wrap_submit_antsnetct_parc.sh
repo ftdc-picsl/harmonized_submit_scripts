@@ -1,6 +1,6 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.0/bin/submit_antsnetct_parcellate.sh"
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.0/bin/submit_antsnetct_batch.sh"
 
 if [[ $# -lt 3 ]]; then
    echo "USAGE: wrap_submit_antsnetct_parc.sh <sub,ses.csv> <config> <atlas_label_config> <optional:queue>"
@@ -38,23 +38,16 @@ echo ""
 echo " i/o is ${antsnetct_dir} " 
 echo ""
 
-for i in `cat $subseslist`; do 
-    sub=$(echo $i | cut -d ',' -f1)
-    ses=$(echo $i | cut -d ',' -f2)
-
     ${submit_script} -b "bsub -q $queue -cwd . " \
         -B $atlas_label_config:$atlas_label_config \
         -i $antsnetct_dir \
         -m 16000 \
-        -n 4 \
+        -n 2 \
         -v $antsnetct_version \
+        antsnetct_parcellate \
+        $subseslist \
         -- \
-        --participant $sub \
-        --session $ses \
-        --dkt \
-        --ho \
+        --dkt31-masked \
+        --hoa-masked \
+        --cerebellum-masked \
         --atlas-label-config $atlas_label_config
-
-    sleep .1
-
-done

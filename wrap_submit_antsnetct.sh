@@ -10,7 +10,7 @@ if [[ $# -lt 2 ]]; then
    echo "   assumes T1-weighted images in bids_in have been brain masked with neck trim using " 
    echo "       T1wPreprocessing done for brain masking with neck trimming completed in t1pre_dir"
    echo "  " 
-   echo "   config specifies bids_in, t1pre_dir, antsnetct_version, and antsnetct_dir"
+   echo "   config specifies bids_in , t1pre_dir, antsnetct_version, and antsnetct_dir"
    echo "---"
    echo "   if queue specified, jobs are submitted to it. Default: ftdc_normal"
    echo "---"
@@ -32,7 +32,7 @@ fi
 source $config
 
 echo ""
-echo " -original BIDS data from ${bids_in} "
+echo " -neck-trimmed and padded t1preproc BIDS data from ${t1pre_dir} "
 echo ""
 echo " -using brain masks from ${t1pre_dir} "
 echo ""
@@ -44,7 +44,7 @@ echo ""
 
     ${submit_script} -b "bsub -q $queue -cwd . " \
         -B $t1pre_dir:$t1pre_dir \
-        -i $bids_in \
+        -i $t1pre_dir \
         -o $antsnetct_dir \
         -v $antsnetct_version \
         antsnetct \
