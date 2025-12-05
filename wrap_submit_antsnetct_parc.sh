@@ -48,8 +48,6 @@ echo ""
         $subseslist \
         -- \
         --dkt31-masked \
-        --hoa \
         --hoa-masked \
-        --cerebellum \
         --cerebellum-masked \
         --atlas-label-config $atlas_label_config
