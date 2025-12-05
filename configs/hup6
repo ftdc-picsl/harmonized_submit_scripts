@@ -1,4 +1,4 @@
 bids_in="/project/ftdc_volumetric/fw_bids"
 t1pre_dir="/project/ftdc_pipeline/data/T1wPreprocessing_062"
-antsnetct_version="0.6.0"
+antsnetct_version="0.6.1"
 antsnetct_dir="/project/ftdc_pipeline/data/antsnetct_${antsnetct_version//.}"
