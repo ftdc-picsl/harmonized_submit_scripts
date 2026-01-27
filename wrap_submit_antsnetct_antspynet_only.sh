@@ -2,18 +2,15 @@
 
 submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.1/bin/submit_antsnetct_batch.sh"
 
-if [[ $# -lt 3 ]]; then
-   echo "USAGE: wrap_submit_antsnetct_parc.sh <sub,ses.csv> <config> <atlas_label_config> <optional:queue>"
+if [[ $# -lt 2 ]]; then
+   echo "USAGE: wrap_submit_antsnetct_parc.sh <sub,ses.csv> <config> <optional:queue>"
    echo "   wraps $submit_script for FTDC-ADRC harmonized ANTsNetCT parcellation pipeline"
    echo "---"
    echo "   all images in antsnetct sub,ses directories get submitted for parcellation"
    echo "  "
    echo "   config specifies bids_in, t1pre_dir, and antsnetct_dir"
    echo " "
-   echo "   atlas_label_config specifies atlases and labels"
-   echo "       atlas_label_config must be absolute path for binding reasons. We use realpath inside to try even if you don't"
-   echo " "
-   echo "   hardcoded inside here to do ANTs deep DKT and HO"
+   echo "   hardcoded inside here to do ANTs deep DKT and HOA"
    echo "---"
    echo "   if queue specified, jobs are submitted to it. Default: ftdc_normal"
    echo "---"
@@ -23,12 +20,10 @@ fi
 
 subseslist=$1
 config=$2
-atlas_label_config=$3
-atlas_label_config=`realpath $atlas_label_config`
 
 queue="ftdc_normal"
-if [[ $# -eq 4 ]]; then
-    queue=$4
+if [[ $# -eq 3 ]]; then
+    queue=$3
 fi
 
 source $config
@@ -39,7 +34,6 @@ echo " i/o is ${antsnetct_dir} "
 echo ""
 
     ${submit_script} -b "bsub -q $queue -cwd . " \
-        -B $atlas_label_config:$atlas_label_config \
         -i $antsnetct_dir \
         -m 16000 \
         -n 2 \
@@ -51,5 +45,4 @@ echo ""
         --dkt31-masked \
         --dkt31-propagated \
         --hoa-masked \
-        --cerebellum-masked \
-        --atlas-label-config $atlas_label_config
+        --cerebellum-masked
