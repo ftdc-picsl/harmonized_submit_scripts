@@ -47,7 +47,4 @@ echo ""
         antsnetct_parcellate \
         $subseslist \
         -- \
-        --dkt31-propagated \
-        --hoa-masked \
-        --cerebellum-masked \
         --atlas-label-config $atlas_label_config

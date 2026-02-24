@@ -1,0 +1,11 @@
+{
+  "lausanne250": {
+    "template_label": "ADNINormalAgingANTs",
+    "template_resolution": "01",
+    "atlas_label": "Lausanne",
+    "atlas_description": "Scale250",
+    "sample_thickness": true,
+    "restrict_to_cortex": false,
+    "propagate_to_cortex": true
+    }
+}
