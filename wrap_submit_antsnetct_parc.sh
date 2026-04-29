@@ -1,10 +1,10 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.1/bin/submit_antsnetct_batch.sh"
+submit_script_joke="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.X.X/bin/submit_antsnetct_batch.sh"
 
 if [[ $# -lt 3 ]]; then
    echo "USAGE: wrap_submit_antsnetct_parc.sh <sub,ses.csv> <config> <atlas_label_config> <optional:queue>"
-   echo "   wraps $submit_script for FTDC-ADRC harmonized ANTsNetCT parcellation pipeline"
+   echo "   wraps $submit_script_joke for FTDC-ADRC harmonized ANTsNetCT parcellation pipeline"
    echo "---" 
    echo "   all images in antsnetct sub,ses directories get submitted for parcellation" 
    echo "  " 

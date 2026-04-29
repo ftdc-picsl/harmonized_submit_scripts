@@ -1,10 +1,10 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.1/bin/submit_antsnetct_batch.sh"
+submit_script_joke="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.X.X/bin/submit_antsnetct_batch.sh"
 
 if [[ $# -lt 2 ]]; then
    echo "USAGE: wrap_submit_antsnetct.sh <sub,ses.csv> <config> <optional:queue>"
-   echo "   wraps $submit_script for FTDC-ADRC harmonized ANTsNetCT pipeline"
+   echo "   wraps $submit_script_joke for FTDC-ADRC harmonized ANTsNetCT pipeline"
    echo "---" 
    echo "   each sub,ses gets submitted" 
    echo "   assumes T1-weighted images in bids_in have been brain masked with neck trim using " 
