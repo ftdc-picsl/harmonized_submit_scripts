@@ -1,6 +1,8 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.0/bin/submit_preproc.sh" #version changed on 2025-10-28 to 0.6.0
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.3/bin/submit_preproc.sh" 
+#version changed on 2025-10-28 to 0.6.0
+# version changed from 0.6.0 to 0.6.3 to get helpful log note
 
 if [[ $# -lt 3 ]] ; then 
 	echo "USAGE: ./submit_pmacsT1Preprocessing.sh <sub,seslist.txt,csv> <session or participant> <config>"
@@ -16,6 +18,11 @@ fi
 sublist=$1
 listtype=$2
 config=$3
+if [[ $# -eq 4 ]] ; then 
+	nthread=$4
+else
+	nthread=4
+fi
 
 if [[ $listtype != "session" && $listtype != "participant" ]] ; then
 	echo "list type must be 'session' or 'participant'"
@@ -24,6 +31,6 @@ fi
 
 source ${config}
 
-cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} ${sublist} ${listtype}" # --trim-neck is default now
+cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} -n ${nthread} ${sublist} ${listtype}" # --trim-neck is default now
 echo $cmd
 $cmd
