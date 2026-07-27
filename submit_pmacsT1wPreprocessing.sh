@@ -1,6 +1,6 @@
 #!/bin/bash
 
-submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.3/bin/submit_preproc.sh" 
+pre_submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsT1wPreprocessing-0.6.3/bin/submit_preproc.sh" 
 #version changed on 2025-10-28 to 0.6.0
 # version changed from 0.6.0 to 0.6.3 to get helpful log note
 
@@ -11,7 +11,7 @@ if [[ $# -lt 3 ]] ; then
 	echo " 		<sub.txt> requires a subID per line if participant"
 	echo "		<config> is the config file used to define the base directories for bids_in, T1Preprocessing output: t1pre_dir, (and ANTsNetCT output: antsnetct_dir)"
 	echo "" 
-	echo "this script submits data in list to $submit_script "
+	echo "this script submits data in list to $pre_submit_script "
 	exit 1
 fi
 
@@ -31,6 +31,6 @@ fi
 
 source ${config}
 
-cmd="${submit_script} -i ${bids_in} -o ${t1pre_dir} -n ${nthread} ${sublist} ${listtype}" # --trim-neck is default now
+cmd="${pre_submit_script} -i ${bids_in} -o ${t1pre_dir} -n ${nthread} ${sublist} ${listtype}" # --trim-neck is default now
 echo $cmd
 $cmd

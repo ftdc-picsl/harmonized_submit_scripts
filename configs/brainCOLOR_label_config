@@ -1,0 +1,19 @@
+{
+"brainCOLORcortical": {
+    "template_label": "ADNINormalAgingANTs",
+    "template_resolution": "01",
+    "atlas_label": "BrainColor",
+    "atlas_description": "cortical",
+    "sample_thickness": true,
+    "restrict_to_cortex": false,
+    "propagate_to_cortex": true
+    },
+  "brainCOLORSubcortical": {
+    "template_label": "ADNINormalAgingANTs",
+    "template_resolution": "01",
+    "atlas_label": "BrainColor",
+    "atlas_description": "subcortical",
+    "sample_thickness": false,
+    "mask_csf": true
+    }
+}
