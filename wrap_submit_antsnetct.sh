@@ -42,9 +42,11 @@ echo " output goes to ${antsnetct_dir} "
 echo ""
 
 
-    ${submit_script} -b "bsub -q $queue -cwd . " \
+    ${submit_script} -b "bsub -q $queue -M 16GB -cwd . " \
         -B $t1pre_dir:$t1pre_dir \
         -i $t1pre_dir \
+        -m 8000 \
+        -n 2 \
         -o $antsnetct_dir \
         -v $antsnetct_version \
         antsnetct \

@@ -1,0 +1,11 @@
+{
+  "schaefer2018x400x7": {
+    "template_label": "MNI152NLin2009cAsym",
+    "template_resolution": "01",
+    "atlas_label": "Schaefer2018",
+    "atlas_description": "400Parcels7Networks",
+    "sample_thickness": true,
+    "restrict_to_cortex": false,
+    "propagate_to_cortex": true
+  }
+}

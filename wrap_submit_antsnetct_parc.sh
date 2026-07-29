@@ -38,10 +38,10 @@ echo ""
 echo " i/o is ${antsnetct_dir} " 
 echo ""
 
-    ${submit_script} -b "bsub -q $queue -cwd . -M 16GB " \
+    ${submit_script} -b "bsub -q $queue -cwd . -M 34GB " \
         -B $atlas_label_config:$atlas_label_config \
         -i $antsnetct_dir \
-        -m 16000 \
+        -m 17000 \
         -n 2 \
         -v $antsnetct_version \
         antsnetct_parcellate \
