@@ -43,6 +43,7 @@ echo ""
         -i $antsnetct_dir \
         -m 17000 \
         -n 2 \
+        -N 10 \
         -v $antsnetct_version \
         antsnetct_parcellate \
         $subseslist \
