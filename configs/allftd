@@ -1,0 +1,5 @@
+bids_in="/project/ftdc_volumetric/allftd/bids"
+t1pre_dir="/project/ftdc_volumetric/allftd/derivatives/T1wPreprocessing_062"
+antsnetct_version="0.6.2"
+antsnetct_dir="/project/ftdc_volumetric/allftd/derivatives/antsnetct_${antsnetct_version//.}"
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.4/bin/submit_antsnetct_batch.sh"

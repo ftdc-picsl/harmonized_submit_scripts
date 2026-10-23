@@ -1,0 +1,5 @@
+bids_in="/project/wolk_4/CLARITI/bids"
+t1pre_dir="/project/wolk_4/CLARITI/bids/derivatives/T1wPreprocessing_060"
+antsnetct_version="0.6.2"
+antsnetct_dir="/project/wolk_4/CLARITI/bids/derivatives/antsnetct_${antsnetct_version//.}"
+submit_script="/project/ftdc_pipeline/ftdc-picsl/pmacsAntsnetct-0.4.4/bin/submit_antsnetct_batch.sh"
