@@ -36,7 +36,7 @@ echo ""
 echo " i/o is ${antsnetct_dir} " 
 echo ""
 
-    ${submit_script} -b "bsub -q $queue -cwd . -M 48GB " \
+    ${submit_script} -b "bsub -Ne -q $queue -cwd . -M 48GB " \
         -i $antsnetct_dir \
         -m 24000 \
         -n 2 \
